@@ -7,27 +7,74 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-image: url('images/image2.png'); background-size: cover !important;">
-  <div id="navbar-container"></div>
+  
+  <nav class="navbar">
+  <ul>
+    <a href="index.html">
+      <img src="images/image.png" alt="Home" style="width: 50px; height: 50px; border-radius: 10px;">
+    </a>
+    <li><a href="sport-e-societa.html">Sport e Società</a></li>
+    <li><a href="eventi-storici.html">Eventi Storici</a></li>
+    <li><a href="interviste.html">Interviste</a></li>
+  </ul>
+</nav>
 
-  <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      });
-  </script>
 <div class="background">
   <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">Introduzione</h1>
   <div id="introduzione-container"></div>
 
-  <script>
-    fetch("html/introduzione.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("introduzione-container").innerHTML = data;
-      });
-  </script>
-</div>
+  <h1 id="introduzione">Introduzione</h1>
+  <p>Lo sport, nel corso del Novecento, si è trasformato in molto più di
+  una semplice competizione fisica: è diventato una lente attraverso cui
+  leggere la società, la politica e la cultura dei popoli. In questo
+  compendio digitale abbiamo scelto di raccontare tre episodi emblematici
+  che mostrano come i grandi momenti sportivi possano riflettere tensioni
+  storiche, ingiustizie sociali e spinte al riscatto personale e
+  collettivo.</p>
+  <h2 id="jesse-owens-e-la-sfida-al-razzismo">Jesse Owens e la sfida al
+  razzismo</h2>
+  <p>Nel 1936, durante le Olimpiadi di Berlino, Jesse Owens – atleta
+  afroamericano – vinse quattro medaglie d’oro sotto gli occhi del regime
+  nazista. La sua impresa fu un atto simbolico di straordinaria potenza:
+  smentì pubblicamente la teoria della supremazia ariana e diede voce,
+  attraverso lo sport, alla dignità delle persone emarginate. Questo
+  episodio rappresenta uno dei momenti più evidenti in cui lo sport ha
+  saputo opporsi a una narrazione politica discriminatoria, diventando
+  <strong>strumento di resistenza sociale</strong>.</p>
+  <h2 id="diego-maradona-e-la-mano-de-dios">Diego Armando Maradona e la Mano de
+  Dios</h2>
+  <p>Nel 1986, durante i Mondiali di calcio in Messico, Diego Armando
+  Maradona segnò due gol contro l’Inghilterra: il primo fu irregolare – la
+  celebre “Mano de Dios” – e il secondo fu il “gol del secolo”.
+  L’episodio, oltre all’aspetto sportivo, assume un significato culturale
+  e politico più ampio: arrivava a pochi anni dalla guerra delle Falkland
+  tra Argentina e Regno Unito, e fu vissuto dal popolo argentino come una
+  forma di <strong>riscatto nazionale</strong>. La “Mano de Dios”
+  simboleggia la ribellione del debole contro il potente, del popolo
+  contro l’oppressore, ed è entrata nella storia come espressione di una
+  <strong>memoria collettiva carica di orgoglio e
+  contraddizione</strong>.</p>
+  <h2 id="michael-jordan-e-il-diritto-di-sbagliare">Michael Jordan e il
+  diritto di sbagliare</h2>
+  <p>Michael Jordan, icona del basket mondiale, è diventato un simbolo di
+  eccellenza non solo per i titoli vinti, ma anche per la sua capacità di
+  fallire pubblicamente. La sua frase: “Ho fallito più e più volte
+  nella mia vita. Ed è per questo che ho avuto successo.”</p>
+  <p>è diventata un riferimento culturale per chi lotta contro il
+  perfezionismo e la paura del fallimento. Jordan ha incarnato un’idea
+  nuova di leadership: fondata non sull’infallibilità, ma sulla
+  <strong>resilienza e sull’apprendimento continuo</strong>. Il suo
+  impatto si estende ben oltre il campo da gioco, influenzando
+  l’educazione, la cultura del lavoro e la riflessione sulla salute
+  mentale degli atleti.</p>
+  <hr />
+  <p>In queste tre storie, lo sport si rivela uno specchio dei tempi:
+  un’arena in cui si giocano le grandi sfide della modernità –
+  dall’identità etnica al colonialismo, dalla disuguaglianza sociale alla
+  cultura dell’errore. Il nostro viaggio inizia qui: attraverso gare,
+  gesti e parole che hanno cambiato la storia, dentro e fuori dallo
+  stadio.</p>
+  </div>
 </body>
 
 </html>
