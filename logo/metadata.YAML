@@ -90,8 +90,7 @@ archiviazione:
 
 distribuzione:
   onix:
-    jesse_owens:
-      title: "Jesse Owens"
+    - title: "Jesse Owens"
       contributor:
         primary_author: "Jesse Owens"
         other_authors: []
@@ -104,8 +103,7 @@ distribuzione:
       price:
         amount: "0"
         currency: "EUR"
-    maradona:
-      title: "Diego Armando Maradona"
+    - title: "Diego Armando Maradona"
       contributor:
         primary_author: "Diego Armando Maradona"
         other_authors: []
@@ -118,8 +116,7 @@ distribuzione:
       price:
         amount: "0"
         currency: "EUR"
-    michael_jordan:
-      title: "Michael Jordan"
+    - title: "Michael Jordan"
       contributor:
         primary_author: "Michael Jordan"
         other_authors: []
