@@ -82,46 +82,62 @@ Infine, la fase di distribuzione ha incluso la pubblicazione su web e la prepara
 
 ```mermaid
 graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
+A[Raccolta contenuti] --> B((Verifica fonti))
+A --> C[Strutturazione contenuti]
+B --> D{Contenuti validi?}
 C --> D
+D -->|Sì| E[Applicazione stile grafico]
+D -->|No| F[Revisione/redazione]
+E --> G[Generazione metadati]
+G --> H[Conversione PDF/EPUB/HTML]
+H --> I[Distribuzione multicanale]
 ```
 ```mermaid
 flowchart LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+    A[Acquisizione automatica via API Wikipedia] --> B[Controllo e integrazione manuale]
+    B --> C{Licenza libera?}
+    C -->|Sì| D[Strutturazione HTML per sezioni]
+    C -->|No| E[Esclusione o sostituzione]
+    D --> F[Applicazione stile CSS]
+    F --> G[Generazione metadati YAML / Schema.org]
+    G --> H[Conversione PDF / EPUB con Pandoc]
+    H --> I[Distribuzione su Web e piattaforme]
 ```
 
 ### Tecnologie adottate
 
-Descrivere le tecnologie addottate nelle diverse fasi e discuterne il contributo in termini di raggiungimento degli obiettivi descritti negli scenari d'uso.
+Per realizzare questo progetto sono state utilizzate diverse tecnologie, selezionate per facilitare la produzione, la conversione e la distribuzione del contenuto in formato digitale. Il punto di partenza è stato l’utilizzo di Markdown, ideale per scrivere testi strutturati in modo ordinato e convertibile in vari formati. Successivamente, i contenuti sono stati trasformati in HTML, linguaggio utilizzato per costruire le pagine web, con il supporto di CSS per la definizione dello stile grafico e della formattazione visiva.
 
-|                |Scenario 1                          |Scenario 2                       |
-|----------------|-------------------------------|-----------------------------|
-|Markdown |`'Isn't this fun?'`            |'Isn't this fun?'            |
-|XSLT       |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|ePud         |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+Per rendere il progetto più interattivo e dinamico, è stato integrato anche JavaScript, impiegato in particolare per estrarre automaticamente i metadati dalle API di Wikipedia, in modo da popolare le pagine HTML con contenuti sempre aggiornati senza dover intervenire manualmente. Uno dei formati finali previsti è l’EPUB, standard internazionale per la pubblicazione di eBook, generato a partire dagli HTML e Markdown grazie all’utilizzo di Pandoc.
+
+Oltre a linguaggi e strumenti di formattazione, sono state utilizzate anche fonti e piattaforme online gratuite. In particolare, Wikipedia è stata usata come principale fonte informativa tramite il suo sistema di API, mentre per il supporto audio-visivo si sono utilizzati servizi di video hosting come YouTube e, in alcuni casi, strumenti online per la generazione vocale o l’adattamento dei contenuti multimediali.
+
+| Tecnologia     | Scenario 1 – Studente universitario            | Scenario 2 – Docente in classe                    |
+|----------------|------------------------------------------------|---------------------------------------------------|
+| **HTML5/CSS3** | Visualizza il compendio online da browser     | Proietta sezioni in aula con struttura chiara     |
+| **JavaScript** | Estrae dinamicamente i metadati da Wikipedia  | Garantisce contenuti sempre aggiornati            |
+| **Pandoc**     | Converte i contenuti per stampa/tesi (PDF)    | Esporta EPUB per lettura offline su e-reader      |
+| **Markdown**   | Facilita la scrittura dei testi modulari      | Permette aggiornamenti rapidi senza formattazione |
+| **YAML**       | Definisce i metadati per ogni sezione         | Compatibile con standard educativi e archivi      |
 
 ### Esecuzione del flusso
-Allegare, possibilmente attraverso il riferimento ad un repository documentale, i materiali, gli script, le configurazioni, che permettono di riprodurre il flusso di produzione documentale. I contenuti non devono necessariamente essere completi, può essere sufficiente fornire un prototipo per ogni tipologia di contenuto previsto e per ogni formato di destinazione previsto.  
+
+I file utilizzati per la realizzazione del progetto sono disponibili nella repository documentale 
 
 ## Valutazione dei risultati raggiunti
 
-
 ### Valutazione del flusso di produzione
 
-Per valutare il contributo proposto valutare le diverse fasi del flusso in termini di (i) riduzione dei tempi di gestione documentale, (ii) riduzione degli errori, (iii) miglioramento della qualità dei documenti, (iv) miglioramento del livello di accettazione della tecnologia, (v) raggiungimento di nuovi canali di distribuzione, (vi) soddisfacimento di nuovi scenari d'uso.
+Il flusso di produzione adottato ha permesso di ridurre sensibilmente i tempi di gestione documentale grazie all’automazione dell’estrazione dei metadati e alla conversione automatica dei formati con Pandoc. L’uso di fonti affidabili e strutture standard ha ridotto gli errori e migliorato la coerenza dei contenuti. L’organizzazione modulare e l’impaginazione coerente hanno aumentato la qualità percepita dei documenti. Le tecnologie semplici e accessibili utilizzate hanno favorito l’accettazione da parte degli utenti. Infine, la possibilità di esportare in HTML, EPUB e PDF ha esteso i canali di distribuzione e ha reso il compendio adatto a diversi scenari d’uso, sia educativi che personali.
  
 ### Confronto con lo stato dell'arte
 
-Può anche essere utile confrontare una versione ASIS del flusso di gestione, senza la tecnologia o le innovazioni proposte, e una TOBE che include la tecnologia e le innovazioni proposte dallo studente.
+È possibile confrontare ASIS e TOBE analizzando i due flussi di gestione docu-mentale. Infatti il flusso di gestione documentale realizzato con mermaid analizza e descrive il flusso di gestione che implementa nuove tecnologie, permettendo di eliminare o comprimere alcuni passaggi che prima era necessario svolgere senza l'aiuto delle tecnologie. Il flusso di gestione documentale realizzato con uno schema .svg descrive l'intero procedimento di realizzazione di un documento, dove sono presenti vari passaggi intermedi che devono essere rispettati e realizzati in maniera separata rispetto al flusso di gestione proposto in questo progetto
+dove vengono uniti alcuni passaggi in un unico solo.
 
 ### Limiti emersi
 
-È importante sottolineare i limiti emersi. Come l'impossibilità di accesso ad alcune tecnologie o fasi del flusso di gestione documentale, limiti nella automazione di alcune passi di trasformazione dei formati o di integrazione delle sorgenti
+Sono emersi alcuni limiti con la conversione dei file in formato ePub, siccome durante la conversione non era possibile convertire alcuni caratteri specifici come " ' " o "". Non è stato possibile aggiungere la riproduzione dell'audio nei formati .docx e .epub del documento. Non è stato possibile aggiungere il font Open Dyslexia al formato ePub per via della generazione di errori durante la conversione da formato .md a formato .ePub. Inoltre non è stato possibile aggiungere media all'interno del file in formato .ePub pr via di errori 
 
 ## Conclusioni
 
