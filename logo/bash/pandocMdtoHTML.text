@@ -1,0 +1,9 @@
+pandoc berlino1936.md -o berlino1936.html --standalone
+
+pandoc manodedios.md -o manodedios.html --standalon
+
+pandoc jordan.md -o jordan.html --standalone
+
+pandoc novemilatirisbagliati.md -o novekjordan.html --standalone
+
+pandoc introduzione.md -o indroduzione.html --standalone 
