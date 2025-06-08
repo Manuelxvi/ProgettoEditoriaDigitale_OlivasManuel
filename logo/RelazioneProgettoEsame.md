@@ -137,12 +137,23 @@ dove vengono uniti alcuni passaggi in un unico solo.
 
 ### Limiti emersi
 
-Sono emersi alcuni limiti con la conversione dei file in formato ePub, siccome durante la conversione non era possibile convertire alcuni caratteri specifici come " ' " o "". Non è stato possibile aggiungere la riproduzione dell'audio nei formati .docx e .epub del documento. Non è stato possibile aggiungere il font Open Dyslexia al formato ePub per via della generazione di errori durante la conversione da formato .md a formato .ePub. Inoltre non è stato possibile aggiungere media all'interno del file in formato .ePub pr via di errori 
+Sono emersi alcuni limiti con la conversione dei file in formato ePub, siccome durante la conversione non era possibile convertire alcuni caratteri specifici come " ' " o "". Non è stato possibile aggiungere la riproduzione dell'audio nei formati .docx e .epub del documento. Non è stato possibile aggiungere il font Open Dyslexia al formato ePub per via della generazione di errori durante la conversione da formato .md a formato .ePub. Inoltre non è stato possibile aggiungere media all'interno del file in formato .ePub per via di errori nella conversione da .yaml a .ePub.  
 
 ## Conclusioni
 
-Discutere i risultati ottenuti, verificando se gli obiettivi definiti dai casi d'uso siano pienamente o parzialmente raggiunti. Evidenziare gli aspetti nei quali si sono raggiunti i risultati più soddisfacenti e le limitazioni emerse.
+I risultati ottenuti dimostrano che gli obiettivi definiti nei casi d’uso sono stati in larga parte raggiunti. Il prodotto editoriale multiformato è stato realizzato con successo in HTML, PDF ed EPUB, e reso disponibile attraverso diversi canali di distribuzione, adattandosi così a molteplici scenari d’uso: dalla consultazione individuale alla didattica in aula. L’automazione del flusso tramite JavaScript e Pandoc ha permesso una notevole riduzione dei tempi di produzione, garantendo al tempo stesso coerenza nei contenuti e nella struttura.
+
+Particolarmente soddisfacenti sono stati i risultati ottenuti nella qualità visiva e organizzativa dei documenti HTML e PDF, così come nell’integrazione dei metadati e nell’accessibilità dei contenuti. Le limitazioni principali sono emerse nella gestione dei contenuti multimediali all’interno del formato EPUB, dove problemi tecnici legati alla conversione dei metadati hanno impedito l’inserimento di video o immagini dinamiche. Nonostante ciò, il progetto ha mostrato una forte adattabilità e un buon grado di scalabilità, confermando la validità del flusso di produzione adottato.
 
 ## Bibliografia e sitografia
-
-Elencare i riferimenti bibliografici e risorse online che hanno maggiormente contribuito alla realizzazione del progetto. Ad esempio [@sechi2010,@pantieri2021,@ceravolo2023]
+	•	Voce “Jesse Owens” – Wikipedia
+	•	Voce “Diego Armando Maradona” – Wikipedia
+	•	Voce “Mano de Dios” – Wikipedia
+	•	Voce “Michael Jordan” – Wikipedia
+	•	Voce “Giochi della XI Olimpiade” – Wikipedia
+	•	Articolo “Jesse Owens, l’afroamericano che batté Hitler alle Olimpiadi” – Storicang.it
+	•	Video “Mano de Dios – Diego Maradona” – YouTube
+	•	Articolo “La Mano de Dios di Maradona” – Il Post
+	•	Articolo “Maradona e la Mano de Dios” – La Repubblica
+	•	Articolo “La Mano de Dios spiegata” – Fanpage
+	•	Articolo “Michael Jordan e la frase sui novemila tiri sbagliati” – Sportface.it
