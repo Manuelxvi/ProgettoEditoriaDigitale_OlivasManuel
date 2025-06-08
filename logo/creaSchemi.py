@@ -9,45 +9,29 @@ data = load_yaml(yaml_file)
 
 def convert_to_onix(data):  #converte in onix
     """Converte i metadati YAML nel formato ONIX."""
-    onix = {  #faccio un mapping degli attributi
-        "Product": {
-            "Title": data["distribuzione"]["onix"]["title"], #ho l'attributo distribuzione, all'interno di distribuzione onix e poi ho i diversi attributi
-            "Contributor": { #faccio un mapping del vocabolario,se ho gia utilizzato un vocabolario compatibile con onix sto semplicemente riscrivendo questo contenuto 
-                "PrimaryAuthor": data["distribuzione"]["onix"]["contributor"]["primary_author"],
-                "OtherAuthors": data["distribuzione"]["onix"]["contributor"]["other_authors"],
-            },
-            "Publisher": data["distribuzione"]["onix"]["publisher"],
-            "PublicationDate": data["distribuzione"]["onix"]["publication_date"],
-            "ISBN": data["distribuzione"]["onix"],
-            "Audience": data["distribuzione"]["onix"]["audience"],
-            "Format": data["distribuzione"]["onix"]["format"],
-            "Price": data["distribuzione"]["onix"]["price"],
-        }
-    }
+    onix = []
+    for item in data["distribuzione"]["onix"]:
+        onix.append({
+            "Product": {
+                "Title": item["title"],
+                "Contributor": {
+                    "PrimaryAuthor": item["contributor"]["primary_author"],
+                    "OtherAuthors": item["contributor"]["other_authors"],
+                },
+                "Publisher": item["publisher"],
+                "PublicationDate": item["publication_date"],
+                "Audience": item["audience"],
+                "Format": item["format"],
+                "Price": item["price"],
+            }
+        })
     return onix
 
 def convert_to_schema_org(data): #la conversione su schema.org
     """Converte i metadati YAML nel formato Schema.org."""
-    schema_org = { #attributi necessari per lo schema.org (context,type...)
-        "@context": "https://schema.org",
-        "@type": "Book",
-        "name": data["distribuzione"]["schema_org"]["name"],
-        "author": [ #inizio a mappare i diversi attributi
-            { #nel momento devo creare un elemento complesso devo dichiarare tutto
-                "@type": "Person",
-                "name": author["name"]
-            } for author in data["distribuzione"]["schema_org"]["author"]
-        ],
-        "datePublished": data["distribuzione"]["schema_org"]["datePublished"],
-        "publisher": {
-            "@type": "Organization",
-            "name": data["distribuzione"]["schema_org"]["publisher"]["name"]
-        },
-        "genre": data["distribuzione"]["schema_org"]["genre"],
-        "language": data["distribuzione"]["schema_org"]["language"],
-        "inLanguage": data["distribuzione"]["schema_org"]["inLanguage"],
-        "format": data["distribuzione"]["schema_org"]["format"],
-    }
+    schema_org = []
+    for key, value in data["schema_org"].items():
+        schema_org.append(value)
     return schema_org
 
 def save_to_file(data, file_path, format="json"):  #funzione per salvataggio finale
