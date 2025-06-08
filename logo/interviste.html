@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interviste</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Carica la navbar
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+
+    // Carica michael jordan da Wikipedia
+    fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Michael_Jordan")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("jordan").innerHTML = `
+          <h2>${data.title}</h2>
+          <p>${data.extract}</p>
+          <img src="${data.thumbnail?.source}" alt="${data.title}" style="max-width: 400px; display: block; margin: 1em 0;">
+          <p><a href="${data.content_urls.desktop.page}" target="_blank">Leggi di più su Wikipedia</a></p>
+        `;
+      });
+
+    // Carica contenuto statico jordan.html
+    fetch("html/jordan.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("jordan-html").innerHTML = data;
+      });
+
+    // Carica contenuto statico novekjordan.html
+    fetch("html/novekjordan.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("novekjordan-html").innerHTML = data;
+      });
+  </script>
+</head>
+
+<body style="background-image: url('images/image2.png'); background-size: cover;">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <div class="background_Interviste">
+    <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
+      Le interviste più belle delle leggende dello sport
+    </h1>
+
+    <hr>
+
+    <!-- 🔹 Michael Jordan -->
+    <div id="jordan"></div>
+
+    <hr>
+
+    <!-- 🔹 Contenuto statico jordan.html -->
+    <div id="jordan-html"></div>
+
+    <!-- 🔹 Contenuto statico novekjordan.html -->
+    <div id="novekjordan-html"></div>
+  </div>
+
+</body>
+</html>

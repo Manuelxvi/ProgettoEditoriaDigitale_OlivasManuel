@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport e Società</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // NAVBAR
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+
+    // Contenuto statico da berlino1936.html
+    fetch("html/berlino1936.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("berlino1936").innerHTML = data;
+      });
+
+    // Estrazione metadati Jesse Owens
+    fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Jesse_Owens")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("owens");
+        container.innerHTML = `
+          <h2>${data.title}</h2>
+          <p>${data.extract}</p>
+          <img src="${data.thumbnail?.source}" alt="${data.title}" style="max-width: 400px; display: block; margin: 1em 0;">
+          <p><a href="${data.content_urls.desktop.page}" target="_blank">Leggi di più su Wikipedia</a></p>
+        `;
+      });
+
+    // Estrazione metadati Olimpiadi 1936
+    fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Giochi_della_XI_Olimpiade")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("olimpiadi");
+        container.innerHTML = `
+          <h2>${data.title}</h2>
+          <p>${data.extract}</p>
+          <p><a href="${data.content_urls.desktop.page}" target="_blank">Leggi di più su Wikipedia</a></p>
+        `;
+      });
+  </script>
+</head>
+
+<body style="background-image: url('images/image2.png'); background-size: cover;">
+
+  <!-- Navbar caricata dinamicamente -->
+  <div id="navbar-container"></div>
+
+  <div class="background_Sport">
+    <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
+      Legame tra lo sport e la Società
+    </h1>
+
+    <!-- Contenuto statico: berlino1936.html -->
+    <div id="berlino1936"></div>
+
+    <hr>
+
+    <!-- Metadati Jesse Owens -->
+    <div id="owens"></div>
+
+    <hr>
+
+    <!-- Metadati Olimpiadi 1936 -->
+    <div id="olimpiadi"></div>
+  </div>
+
+</body>
+</html>

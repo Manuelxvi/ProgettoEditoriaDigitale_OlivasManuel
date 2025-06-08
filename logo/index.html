@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('images/image2.png'); background-size: cover !important;">
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+<div class="background">
+  <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">Introduzione</h1>
+  <div id="introduzione-container"></div>
+
+  <script>
+    fetch("html/introduzione.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("introduzione-container").innerHTML = data;
+      });
+  </script>
+</div>
+</body>
+
+</html>

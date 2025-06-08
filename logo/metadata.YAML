@@ -1,0 +1,169 @@
+gestione_documentale:
+  input_files:
+    - markdown/Introduzione.md
+    - markdown/berlino1936.md
+    - markdown/manodedios.md
+    - markdown/novek.md
+    - markdown/jordan.md
+
+  output_formats:
+    - html
+    - docx
+    - epub
+
+contenuti:
+  jesse_owens:
+    titolo: "Jesse Owens"
+    descrizione: "Atleta afroamericano, vincitore di 4 ori alle Olimpiadi di Berlino 1936."
+    immagine: "https://i0.wp.com/www.panathlondistrettoitalia.it/wp-content/uploads/2020/07/owens-hitler.jpg?fit=864%2C691&ssl=1"
+    link: "https://it.wikipedia.org/wiki/Jesse_Owens"
+  maradona:
+    titolo: "Diego Armando Maradona"
+    descrizione: "Calciatore argentino, protagonista della 'Mano de Dios'."
+    immagine: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Diego_Maradona_2017.jpg"
+    link: "https://it.wikipedia.org/wiki/Diego_Armando_Maradona"
+  michael_jordan:
+    titolo: "Michael Jordan"
+    descrizione: "Considerato uno dei più grandi giocatori di basket di tutti i tempi."
+    immagine: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg"
+    link: "https://it.wikipedia.org/wiki/Michael_Jordan"
+  berlino_1936:
+    titolo: "Olimpiadi di Berlino 1936"
+    descrizione: "Evento sportivo segnato dalla vittoria di Jesse Owens e dal contesto politico nazista."
+    immagine: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Bundesarchiv_Bild_183-R96374%2C_Berlin%2C_Olympiastadion%2C_Er%C3%B6ffnung.jpg"
+    link: "https://it.wikipedia.org/wiki/Giochi_della_XI_Olimpiade"
+  manodedios:
+    titolo: "Mano de Dios"
+    descrizione: "Il celebre gol di mano segnato da Maradona ai Mondiali 1986."
+    immagine: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Diego_Maradona_2017.jpg"
+    link: "https://it.wikipedia.org/wiki/Mano_de_Dios"
+  novemilatiri:
+    titolo: "Novemila tiri sbagliati"
+    descrizione: "Celebre frase di Michael Jordan sulla perseveranza e il fallimento nello sport."
+    immagine: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg"
+    link: "https://it.wikipedia.org/wiki/Michael_Jordan#Carriera"
+
+archiviazione:
+  dublin_core:
+    jesse_owens:
+      title: "Jesse Owens"
+      creator: ["Jesse Owens"]
+      subject: ["Olimpiadi di Berlino 1936", "Atletica"]
+      description: "Atleta afroamericano, vincitore di 4 ori alle Olimpiadi di Berlino 1936."
+      publisher: "Wikipedia"
+      contributor: ["Storia dello Sport"]
+      date: "1936-08-09"
+      type: "Personaggio sportivo"
+      format: "text/html"
+      identifier: "https://it.wikipedia.org/wiki/Jesse_Owens"
+      language: "it"
+      coverage: "Berlino, Germania"
+      rights: "CC BY-SA"
+    maradona:
+      title: "Diego Armando Maradona"
+      creator: ["Diego Armando Maradona"]
+      subject: ["Calcio", "Mondiali 1986"]
+      description: "Calciatore argentino, protagonista della 'Mano de Dios'."
+      publisher: "Wikipedia"
+      contributor: ["Storia dello Sport"]
+      date: "1986-06-22"
+      type: "Personaggio sportivo"
+      format: "text/html"
+      identifier: "https://it.wikipedia.org/wiki/Diego_Armando_Maradona"
+      language: "it"
+      coverage: "Città del Messico, Messico"
+      rights: "CC BY-SA"
+    michael_jordan:
+      title: "Michael Jordan"
+      creator: ["Michael Jordan"]
+      subject: ["Basket", "NBA"]
+      description: "Considerato uno dei più grandi giocatori di basket di tutti i tempi."
+      publisher: "Wikipedia"
+      contributor: ["Storia dello Sport"]
+      date: "1998-06-14"
+      type: "Personaggio sportivo"
+      format: "text/html"
+      identifier: "https://it.wikipedia.org/wiki/Michael_Jordan"
+      language: "it"
+      coverage: "Chicago, USA"
+      rights: "CC BY-SA"
+
+distribuzione:
+  onix:
+    jesse_owens:
+      title: "Jesse Owens"
+      contributor:
+        primary_author: "Jesse Owens"
+        other_authors: []
+      publisher: "Wikipedia"
+      publication_date: "1936-08-09"
+      audience: "Appassionati di sport"
+      format:
+        type: "Digital"
+        file_format: "html"
+      price:
+        amount: "0"
+        currency: "EUR"
+    maradona:
+      title: "Diego Armando Maradona"
+      contributor:
+        primary_author: "Diego Armando Maradona"
+        other_authors: []
+      publisher: "Wikipedia"
+      publication_date: "1986-06-22"
+      audience: "Appassionati di sport"
+      format:
+        type: "Digital"
+        file_format: "html"
+      price:
+        amount: "0"
+        currency: "EUR"
+    michael_jordan:
+      title: "Michael Jordan"
+      contributor:
+        primary_author: "Michael Jordan"
+        other_authors: []
+      publisher: "Wikipedia"
+      publication_date: "1998-06-14"
+      audience: "Appassionati di sport"
+      format:
+        type: "Digital"
+        file_format: "html"
+      price:
+        amount: "0"
+        currency: "EUR"
+
+schema_org:
+  jesse_owens:
+    "@context": "https://schema.org"
+    "@type": "Person"
+    name: "Jesse Owens"
+    description: "Atleta afroamericano, vincitore di 4 ori alle Olimpiadi di Berlino 1936."
+    url: "https://it.wikipedia.org/wiki/Jesse_Owens"
+    image: "https://i0.wp.com/www.panathlondistrettoitalia.it/wp-content/uploads/2020/07/owens-hitler.jpg?fit=864%2C691&ssl=1"
+    birthPlace: "Oakville, Alabama, USA"
+    nationality: "USA"
+    genre: ["Atletica"]
+    inLanguage: "it"
+  maradona:
+    "@context": "https://schema.org"
+    "@type": "Person"
+    name: "Diego Armando Maradona"
+    description: "Calciatore argentino, protagonista della 'Mano de Dios'."
+    url: "https://it.wikipedia.org/wiki/Diego_Armando_Maradona"
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Diego_Maradona_2017.jpg"
+    birthPlace: "Lanús, Argentina"
+    nationality: "Argentina"
+    genre: ["Calcio"]
+    inLanguage: "it"
+  michael_jordan:
+    "@context": "https://schema.org"
+    "@type": "Person"
+    name: "Michael Jordan"
+    description: "Considerato uno dei più grandi giocatori di basket di tutti i tempi."
+    url: "https://it.wikipedia.org/wiki/Michael_Jordan"
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg"
+    birthPlace: "Brooklyn, New York, USA"
+    nationality: "USA"
+    genre: ["Basket"]
+    inLanguage: "it"

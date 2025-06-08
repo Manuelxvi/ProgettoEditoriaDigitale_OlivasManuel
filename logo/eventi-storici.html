@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventi Storici</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // navbar
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+
+    // sezione testuale extra (html/manodedios.html)
+    fetch("html/manodedios.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("manodedios-extra").innerHTML = data;
+      });
+
+    // Estrazione metadati Diego Maradona
+    fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Diego_Armando_Maradona")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("maradona").innerHTML = `
+          <h2>${data.title}</h2>
+          <p>${data.extract}</p>
+          <img src="${data.thumbnail?.source}" alt="${data.title}" style="max-width: 200px; display: block; margin: 1em 0;">
+          <p><a href="${data.content_urls.desktop.page}" target="_blank">Leggi di più su Wikipedia</a></p>
+        `;
+      });
+
+    // Estrazione metadati Mano de Dios
+    fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Mano_de_Dios")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("manodedios").innerHTML = `
+          <h2>${data.title}</h2>
+          <p>${data.extract}</p>
+        `;
+      });
+  </script>
+</head>
+
+<body style="background-image: url('images/image2.png'); background-size: cover;">
+
+  <!-- Navbar caricata dinamicamente -->
+  <div id="navbar-container"></div>
+
+  <div class="background_Storia">
+    <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
+      Eventi sportivi che hanno cambiato la storia
+    </h1>
+
+    <hr>
+
+    <!-- 🔹 Diego Maradona -->
+    <div id="maradona"></div>
+
+    <hr>
+
+    <!-- 🔹 Mano de Dios -->
+    <div id="manodedios"></div>
+
+    <!-- Video YouTube -->
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/p-QOLsypsnQ" 
+            title="Mano de Dios - Diego Maradona" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
+    <!-- Testo statico extra -->
+    <div id="manodedios-extra"></div>
+  </div>
+
+</body>
+</html>
