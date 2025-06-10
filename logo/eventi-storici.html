@@ -7,19 +7,6 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-    // navbar
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      });
-
-    // sezione testuale extra (html/manodedios.html)
-    fetch("html/manodedios.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("manodedios-extra").innerHTML = data;
-      });
 
     // Estrazione metadati Diego Maradona
     fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Diego_Armando_Maradona")
@@ -48,7 +35,16 @@
 <body style="background-image: url('images/image2.png'); background-size: cover;">
 
   <!-- Navbar caricata dinamicamente -->
-  <div id="navbar-container"></div>
+  <nav class="navbar">
+  <ul>
+    <a href="index.html">
+      <img src="images/image.png" alt="Home" style="width: 50px; height: 50px; border-radius: 10px;">
+    </a>
+    <li><a href="sport-e-societa.html">Sport e Società</a></li>
+    <li><a href="eventi-storici.html">Eventi Storici</a></li>
+    <li><a href="interviste.html">Interviste</a></li>
+  </ul>
+</nav>
 
   <div class="background_Storia">
     <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
@@ -73,8 +69,43 @@
             allowfullscreen></iframe>
 
     <!-- Testo statico extra -->
-    <div id="manodedios-extra"></div>
-  </div>
+    <div id="manodedios-extra">
+            <h2 id="la-mano-de-dios-un-gesto-che-ha-cambiato-il-calcio-e-non-solo">La
+      Mano de Dios: un gesto che ha cambiato il calcio e non solo</h2>
+      <p>Il 22 giugno 1986, durante i quarti di finale del Campionato del
+      Mondo, Diego Armando Maradona segnò contro l’Inghilterra due dei gol più
+      famosi della storia del calcio. Il primo, irregolare, è passato alla
+      storia come “la Mano de Dios”. Ma il suo impatto è andato ben oltre il
+      campo.</p>
+      <h3 id="un-simbolo-di-riscatto-nazionale">Un simbolo di riscatto
+      nazionale</h3>
+      <p>Il gol con la mano è stato visto da molti argentini come un riscatto
+      simbolico nei confronti dell’Inghilterra, dopo la recente guerra delle
+      Falkland/Malvinas del 1982. La vittoria in quella partita rappresentò,
+      agli occhi del popolo argentino, una vendetta sportiva su un terreno
+      neutrale.</p>
+      <p>Fonte: <a
+      href="https://www.ilsuperuovo.it/calcio-e-politica-quando-la-mano-de-dios-contribui-alla-rivalsa-dellargentina/?utm_source=chatgpt.com">Il
+      Superuovo – Calcio e politica: quando la Mano de Dios contribuì alla
+      rivalsa dell’Argentina</a></p>
+      <h3 id="maradona-oltre-il-calcio">Maradona: oltre il calcio</h3>
+      <p>Maradona divenne un’icona culturale e politica. La sua figura
+      rappresentava il riscatto degli ultimi, degli esclusi, e la “Mano de
+      Dios” alimentò il mito del genio ribelle che sfida le regole e vince
+      comunque.</p>
+      <p>Fonte: <a
+      href="https://www.treccani.it/magazine/atlante/societa/Maradona_un_fenomeno_sociale.html?utm_source=chatgpt.com">Treccani
+      – Maradona: un fenomeno sociale</a></p>
+      <h3 id="uneredità-culturale-duratura">Un’eredità culturale duratura</h3>
+      <p>L’espressione “Mano de Dios” è entrata nel linguaggio comune.
+      L’immagine del gol è diventata iconica, tanto che il pallone usato in
+      quella partita è stato messo all’asta, raggiungendo valori
+      milionari.</p>
+      <p>Fonte: <a
+      href="https://www.quotidianodipuglia.it/sport/news/pallone_mano_de_dios_asta_argentina_inghilterra_maradona_prezzo_quanto_vale-6989446.html?utm_source=chatgpt.com">Quotidiano
+      di Puglia – All’asta il pallone della Mano de Dios</a></p>
+          </div>
+        </div>
 
 </body>
 </html>
