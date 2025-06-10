@@ -7,19 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-    // NAVBAR
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      });
-
-    // Contenuto statico da berlino1936.html
-    fetch("html/berlino1936.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("berlino1936").innerHTML = data;
-      });
+    
 
     // Estrazione metadati Jesse Owens
     fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Jesse_Owens")
@@ -51,7 +39,16 @@
 <body style="background-image: url('images/image2.png'); background-size: cover;">
 
   <!-- Navbar caricata dinamicamente -->
-  <div id="navbar-container"></div>
+  <nav class="navbar">
+  <ul>
+    <a href="index.html">
+      <img src="images/image.png" alt="Home" style="width: 50px; height: 50px; border-radius: 10px;">
+    </a>
+    <li><a href="sport-e-societa.html">Sport e Società</a></li>
+    <li><a href="eventi-storici.html">Eventi Storici</a></li>
+    <li><a href="interviste.html">Interviste</a></li>
+  </ul>
+</nav>
 
   <div class="background_Sport">
     <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
@@ -59,7 +56,33 @@
     </h1>
 
     <!-- Contenuto statico: berlino1936.html -->
-    <div id="berlino1936"></div>
+    <div id="berlino1936">
+      <h2 id="jesse-owens-e-le-olimpiadi-di-berlino-1936">Jesse Owens e le
+Olimpiadi di Berlino 1936</h2>
+<p>
+<a href="https://istorica.it/2021/07/24/jesse-owens-lafroamericano-che-batte-hitler-alle-olimpiadi/?utm_source=chatgpt.com">istorica.it</a></p>
+<figure>
+<img style="width: 350px ;" src="https://i0.wp.com/www.panathlondistrettoitalia.it/wp-content/uploads/2020/07/owens-hitler.jpg?fit=864%2C691&ssl=1"
+alt="Jesse Owens alle Olimpiadi di Berlino 1936" />
+<figcaption aria-hidden="true">Jesse Owens indsieme a Adolf Hitler alle Olimpiadi di Berlino
+1936</figcaption>
+</figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Jesse Owens, l’afroamericano che battè Hitler
+alle Olimpiad</p></li>
+<li id="fn2"><p>Jesse Owens, ragazzo afroamericano cresciuto nelle
+piantagioni dell’Alabama, conquistò quattro medaglie d’oro a Berlino
+durante i Giochi del 1936, smentendo la propaganda nazista sulla
+supremazia della razza ariana.</p></li>
+<li id="fn3"><p>La sua vittoria divenne un simbolo potente: non solo
+sportivo, ma anche politico e culturale.</p></li>
+</ol>
+</section>
+</body>
+    </div>
 
     <hr>
 
