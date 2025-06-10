@@ -5,14 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interviste</title>
   <link rel="stylesheet" href="styles.css">
-
   <script>
-    // Carica la navbar
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      });
 
     // Carica michael jordan da Wikipedia
     fetch("https://it.wikipedia.org/api/rest_v1/page/summary/Michael_Jordan")
@@ -25,27 +18,22 @@
           <p><a href="${data.content_urls.desktop.page}" target="_blank">Leggi di più su Wikipedia</a></p>
         `;
       });
-
-    // Carica contenuto statico jordan.html
-    fetch("html/jordan.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("jordan-html").innerHTML = data;
-      });
-
-    // Carica contenuto statico novekjordan.html
-    fetch("html/novekjordan.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("novekjordan-html").innerHTML = data;
-      });
   </script>
 </head>
 
 <body style="background-image: url('images/image2.png'); background-size: cover;">
 
   <!-- Navbar -->
-  <div id="navbar-container"></div>
+  <nav class="navbar">
+  <ul>
+    <a href="index.html">
+      <img src="images/image.png" alt="Home" style="width: 50px; height: 50px; border-radius: 10px;">
+    </a>
+    <li><a href="sport-e-societa.html">Sport e Società</a></li>
+    <li><a href="eventi-storici.html">Eventi Storici</a></li>
+    <li><a href="interviste.html">Interviste</a></li>
+  </ul>
+</nav>
 
   <div class="background_Interviste">
     <h1 style="color: #003366; text-align: center; text-transform: uppercase; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">
@@ -60,10 +48,118 @@
     <hr>
 
     <!-- 🔹 Contenuto statico jordan.html -->
-    <div id="jordan-html"></div>
+    <div>
+      <h2>Chi è?</h2>
+      <p>Michael Jordan è considerato uno dei più grandi giocatori della
+      storia del basket. Nato nel 1963, ha trascorso la maggior parte della
+      sua carriera con i Chicago Bulls, con cui ha vinto sei titoli NBA negli
+      anni ’90. È noto per la sua incredibile competitività, atletismo e per
+      aver trasformato l’NBA in un fenomeno globale.</p>
+
+      <h3 id="frase-celebre">Frase celebre</h3>
+      <blockquote>
+      <p>“Ho sbagliato più di 9000 tiri nella mia carriera. Ho perso quasi 300
+      partite. 26 volte mi è stato affidato il tiro decisivo e l’ho sbagliato.
+      Ho fallito tante volte. Ed è per questo che ho vinto.”<br />
+      — Michael Jordan ## Guarda il video</p>
+      </blockquote>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/Pscbwh9iKv0" title="I SUCCEED - Michael Jordan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <h3 id="link-di-approfondimento">Link di approfondimento</h3>
+      <p><a href="https://www.nbapassion.com/aneddoti-nba/michael-jordan-ho-fallito-molte-volte-ed-e-per-questo-che-ho-vinto-tutto-62348/">Leggi la voce
+      completa su nbapassion</a></p></div>
 
     <!-- 🔹 Contenuto statico novekjordan.html -->
-    <div id="novekjordan-html"></div>
+          <div id="novekjordan-html"><h2 id="il-contesto-sociale-della-citazione-di-michael-jordan">Il
+      contesto sociale della citazione di Michael Jordan</h2>
+      <p>La celebre frase di Michael Jordan: &gt; “Ho sbagliato più di 9000
+      tiri nella mia carriera. Ho perso quasi 300 partite. 26 volte mi hanno
+      dato la fiducia per fare il tiro vincente dell’ultimo secondo e ho
+      sbagliato. Ho fallito più e più e più volte nella mia vita. Ed è per
+      questo che ho avuto successo.”</p>
+      <p>viene spesso citata come esempio di resilienza individuale. Tuttavia,
+      per comprenderne appieno il significato, è utile collocarla nel suo
+      <strong>contesto sociale</strong>.</p>
+      <h3 id="michael-jordan-e-la-cultura-dellerrore">Michael Jordan e la
+      cultura dell’errore</h3>
+      <h4 id="la-pressione-delleccellenza">1. La pressione
+      dell’eccellenza</h4>
+      <ul>
+      <li><strong>Anni ’80–’90</strong>: il basket NBA stava diventando un
+      fenomeno globale.<br />
+      </li>
+      <li>Una superstar come Jordan era <strong>sotto i riflettori
+      costantemente</strong>: ogni errore in partita veniva amplificato dai
+      media e dai tifosi.</li>
+      <li>Riuscire in quell’ambiente significava imparare a gestire non solo
+      il gioco, ma anche le aspettative collettive.</li>
+      </ul>
+      <h4 id="limportanza-del-diritto-di-sbagliare">2. L’importanza del
+      “diritto di sbagliare”</h4>
+      <ul>
+      <li>In un articolo pubblicato su LinkedIn, Giampiero Catania sottolinea
+      che: &gt; “Spesso si ha paura di sbagliare perché si teme che l’errore
+      minacci la propria reputazione o il proprio valore come persona. Jordan,
+      invece, mostra come il fallimento sia un passo necessario per crescere.”
+      <a
+      href="https://it.linkedin.com/pulse/michael-jordan-e-il-diritto-di-sbagliare-giampiero-catania?utm_source=chatgpt.com">oai_citation:0‡it.linkedin.com</a><br />
+      </li>
+      <li><strong>Messaggio sociale</strong>: riconoscere l’errore come
+      esperienza formativa favorisce un ambiente (sportivo, lavorativo,
+      educativo) in cui le persone possono <strong>osare senza timore di
+      essere giudicate</strong>.</li>
+      </ul>
+      <h4 id="modello-per-le-nuove-generazioni">3. Modello per le nuove
+      generazioni</h4>
+      <ul>
+      <li>Dopo la parziale “sbornia da successi” degli anni ’90, Jordan è
+      diventato un <strong>modello non soltanto sportivo</strong>, ma anche di
+      approccio psicologico alla vita:
+      <ul>
+      <li><strong>Fallire pubblicamente</strong> è diventato un atto di
+      coraggio, non più una vergogna.</li>
+      <li>Il suo approccio ha contribuito a ridurre lo stigma sociale legato
+      all’insuccesso, aprendo la strada a discussioni su salute mentale e
+      produttività.</li>
+      </ul></li>
+      </ul>
+      <h3 id="impatto-culturale-più-ampio">Impatto culturale più ampio</h3>
+      <ol type="1">
+      <li><strong>Educazione e formazione</strong>
+      <ul>
+      <li>I coach e gli insegnanti citano spesso questa frase per
+      <strong>incoraggiare studenti e atleti</strong> a non temere il
+      fallimento.<br />
+      </li>
+      <li>Si è diffusa l’idea che <strong>“chi non prova, non
+      sbaglia”</strong> vada sostituita con “chi non sbaglia, non
+      impara”.</li>
+      </ul></li>
+      <li><strong>Luoghi di lavoro</strong>
+      <ul>
+      <li>Molte aziende hanno adottato la filosofia del “fail fast, learn
+      faster” (sbaglia in fretta, impara più in fretta).<br />
+      </li>
+      <li>Il modello di Jordan ha influenzato le politiche aziendali che
+      <strong>premiano l’innovazione anche a rischio di errori</strong>.</li>
+      </ul></li>
+      <li><strong>Riflessione sulla società del successo</strong>
+      <ul>
+      <li>In un’epoca dominata dai social media, <strong>si tende a mostrare
+      solo i successi</strong>.<br />
+      </li>
+      <li>La citazione di Jordan ha stimolato un dibattito sul valore di
+      <strong>mostrare anche le sconfitte</strong>, favorendo un approccio più
+      autentico alla performance.</li>
+      </ul></li>
+      </ol>
+      <hr />
+      <h3 id="fonti">Fonti</h3>
+      <ul>
+      <li>Giampiero Catania, “Michael Jordan e il diritto di sbagliare” su
+      LinkedIn <a
+      href="https://it.linkedin.com/pulse/michael-jordan-e-il-diritto-di-sbagliare-giampiero-catania?utm_source=chatgpt.com">oai_citation:1‡it.linkedin.com</a></li>
+      </ul></div>
   </div>
 
 </body>
